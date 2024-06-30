@@ -1,49 +1,30 @@
-import React from 'react';
-import Body_Card from './Body_Card';
-
-const data = [
-  {
-    img: "https://img.icons8.com/color/48/dragon.png",
-    Name: "Branches",
-    Text: "Abstract Branches lets you manage, version, and document your designs in one place."
-  },
-  {
-    img: "https://img.icons8.com/color/48/day-of-the-dead.png",
-    Name: "Manage organizations, teams, and projects",
-    Text: "Use Abstract organizations, teams, and projects to organize your people and your work."
-  },
-  {
-    img: "https://img.icons8.com/color/48/monarch-butterfly.png",
-    Name: "Authenticate to Abstract",
-    Text: "Set up and configure SSO, SCIM, and Just-in-Time provisioning."
-  },
-  {
-    img: "https://img.icons8.com/color/48/cat--v1.png",
-    Name: "Manage your account",
-    Text: "Configure your account settings, such as your email, profile details, and password."
-  },
-  {
-    img: "https://img.icons8.com/color/48/dog.png",
-    Name: "Manage billing",
-    Text: "Change subscriptions and payment details."
-  },
-  {
-    img: "https://img.icons8.com/color/48/clown-fish.png",
-    Name: "Abstract support",
-    Text: "Get in touch with a human."
-  }
-];
+import React from 'react'
+import Card1 from './Card1'
+import Card2 from './Card2'
+import Card3 from './Card3'
 
 const Body = () => {
   return (
-    <div className='h-[40rem] w-full'>
-      <div className='grid grid-cols-2 gap-[5rem] justify-center m-40 h-[35rem] w-[82rem]'>
-        {data.map((e, i) => (
-          <Body_Card key={i} name={e.Name} text={e.Text} img={e.img} />
-        ))}
+    <div className='h-[70rem] w-full bg-green-100'>
+      <div className='flex flex-col items-center '>
+        <h1 className='font-bold text-5xl mt-5 '>Try Pulse free for</h1>
+        <h1 className='font-bold text-5xl '>30 days.</h1>
+        <h1 className='mt-5 text-gray-500'>See why Pulse is the best way to monitor your cash flow. Sign up</h1>
+         <h1 className='text-gray-500'>for any plan and try Pulse absolutely free for 30 days.</h1>
+      </div>
+      <div className='flex flex-row justify-center mt-[9rem]'>
+        <Card1></Card1>
+        <Card2></Card2>
+        <Card3></Card3>
+      </div>
+      <div className='text-gray-600 w-full h-11 flex flex-col justify-center items-center mt-28'>
+        <h1 className='w-[40rem] text-lg'>"Pulse is worth every penny because it empowers business owners with critical</h1>
+        <h1 className='w-[40rem] text-lg ml-[20rem]'>Financial insight and knowledge."</h1>
+        
+        <h2 className='text-sm text-green-600 mt-5'>SUBVERT MARKETING,INC.</h2>
       </div>
     </div>
-  );
+  )
 }
 
-export default Body;
+export default Body
